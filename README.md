@@ -1,4 +1,4 @@
-# Vasil's Companion Project
+# AppointmentsApp - Project
 
 The goal of this project is to get more familiar with a modern frontend setup for [AngularJS](https://github.com/angular/angular.js) projects, in such a way that it gets closer to how things are done with Angular. This project is using [NPM](https://github.com/npm/npm) as package manager, [TypeScript](https://github.com/Microsoft/TypeScript) and [Webpack](https://github.com/webpack/webpack) as module loader as well as [Groovy](https://groovy-lang.org/)
 and [Grails](https://grails.org/) for the backend development.
