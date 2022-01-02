@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="application.bootstrap">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+
+<body>
+<nav class="navbar navbar-dark bg-dark">
+  <ul class="navbar-nav" style="flex-direction: row">
+    <li class="nav-item mr-2">
+      <a class="nav-link" href="#/appointments">Appointments</a>
+    </li>
+    <li class="nav-item" style="margin-left: 10px;">
+      <a class="nav-link" href="#/patients">Patients</a>
+    </li>
+  </ul>
+</nav>
+<div class="app" ui-view></div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+{
+  "extends": "tslint:recommended",
+  "rules": {
+    "object-literal-key-quotes": false,
+    "curly": false,
+    "object-literal-shorthand": false,
+    "no-empty-interface": false,
+    "only-arrow-functions": false,
+    "arrow-parens": false,
+    "interface-name": false,
+    "array-type": [
+      true,
+      "array-simple"
+    ],
+    "ordered-imports": false,
+    "prefer-const": false,
+    "no-unsafe-finally": true,
+    "object-literal-sort-keys": false,
+    "no-var-requires": false,
+    "no-string-literal": false,
+    "no-console": false,
+    "no-namespace": false,
+    "no-consecutive-blank-lines": false,
+    "comment-format": false,
+    "trailing-comma": [
+      true,
+      {
+        "singleline": "never"
+      }
+    ],
+    "indent": [
+      true,
+      "spaces"
+    ],
+    "quotemark": [
+      true,
+      "single",
+      "avoid-escape"
+    ],
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore",
+      "allow-pascal-case"
+    ],
+    "whitespace": false,
+    "member-access": false,
+    "member-ordering": false,
+    "one-line": [
+      true,
+      "check-catch",
+      "check-open-brace"
+    ],
+    "no-empty": false,
+    "no-trailing-whitespace": false,
+    "max-line-length": [false],
+    "space-before-function-paren": false
+  },
+  "jsRules": {
+    "quotemark": [
+      "single",
+      "avoid-escape"
+    ],
+    "object-literal-sort-keys": false,
+    "trailing-comma": false,
+    "no-trailing-whitespace": false
+  }
+}

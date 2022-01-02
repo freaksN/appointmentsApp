@@ -1,0 +1,20 @@
+<div class="modal-header">
+  <h5 class="modal-title" id="deleteDeniedModalTitle"><b>{{ngDialogData.firstName}}</b>, <b>{{ngDialogData.lastName}}</b> cannot be deleted</h5>
+</div>
+<div class="modal-body">
+  <div class="container text-danger">
+    <i class="fas fa-exclamation-circle"></i>The patient "<b>{{ngDialogData.firstName}}, {{ngDialogData.lastName}}</b>" is assigned to:
+    <ul class="list-group-flush mt-2 mb-2">
+      <li class="list-group-item bg-transparent" ng-repeat="appointment in ngDialogData.appointments">
+        <b>{{appointment.appointmentDate}}</b> at <b>{{appointment.appointmentTime}}</b> with <b>Dr.
+        {{appointment.doctor.firstName}}</b>, <b>{{appointment.doctor.lastName}}</b>
+        <a type="button" title="edit this appointment" class="ml-2" ui-sref="add-appointment({id:appointment.id})" ng-click="closeThisDialog()"><i
+          class="fas fa-pen"></i></a>
+      </li>
+    </ul>
+    <span>In order to delete the patient "<b>{{ngDialogData.firstName}}</b>, <b>{{ngDialogData.lastName}}</b>" you either have to remove the patient from the appointment or the appointment has to be deleted beforehand.</span>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" ng-click="closeThisDialog()">Close</button>
+</div>

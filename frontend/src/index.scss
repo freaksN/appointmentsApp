@@ -1,0 +1,16 @@
+/**
+ * Vendor styles go here
+ **/
+
+ @import '../node_modules/bootstrap/dist/css/bootstrap.css';
+ @import '../node_modules/angularjs-datepicker/src/css/angular-datepicker.css';
+ @import '../node_modules/ng-dialog/css/ngDialog.min.css';
+ @import '../node_modules/ng-dialog/css/ngDialog-theme-default.css';
+
+/**
+ * Global styles go here
+ **/
+
+ body {
+     background-color: #EEE;
+ }

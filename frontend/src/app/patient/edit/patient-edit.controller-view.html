@@ -1,0 +1,36 @@
+<h1 class="sectionHeader">{{vm.pageTitle}} Patient</h1>
+<div class="container">
+  <form name="addPatientForm" ng-submit="vm.submit()">
+    <div class="row mt-4">
+      <div class="col-xs-1">
+        <span><b>First Name</b></span>
+      </div>
+      <div class="col-md-4">
+          <input required ng-model="vm.patient.firstName" type="text" id="firstName" class="fullWidth"/>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-xs-1">
+        <span><b>Last Name</b></span>
+      </div>
+      <div class="col-md-4">
+        <input required ng-model="vm.patient.lastName" type="text" id="lastName" class="fullWidth"/>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-xs-1">
+        <span><b>Notes about the patient</b></span>
+      </div>
+      <div class="col-md-8">
+        <textarea ng-model="vm.patient.notes" id="notes" rows="4" cols="80" class="fullWidth"></textarea>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center saveAppointment">
+      <button type="submit" class="btn btn-success createNewBtn" style="margin-right: 50px;" title="Save changes">Save <i class="fas fa-save"></i></button>
+      <button type="button" title="Remove this patient" class="btn btn-danger createNewBtn"
+         ng-click="vm.openDeleteDialog()">
+        Delete Patient <i class=" fas fa-trash-alt"></i></button>
+    </div>
+  </form>
+<button  onclick="history.back()" title="Go back to the previous page" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Back</button>
+</div>

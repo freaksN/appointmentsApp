@@ -1,0 +1,11 @@
+import backend.Appointment
+
+model {
+    Appointment appointment
+}
+
+json g.render(appointment, [excludes: ['patient', 'doctor', 'appointmentDate']]) {
+    appointmentDate appointment.formatAppointmentDate(appointment.appointmentDate)
+    patient appointment.patient.properties.subMap(['id', 'firstName', 'lastName', 'notes'])
+    doctor appointment.doctor.properties.subMap(['id', 'firstName', 'lastName'])
+}

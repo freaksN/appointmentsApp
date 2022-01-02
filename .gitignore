@@ -1,0 +1,8 @@
+.idea
+.npmrc
+.tmp
+.vscode
+build
+node_modules
+public
+coverage

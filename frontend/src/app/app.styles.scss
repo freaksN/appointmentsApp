@@ -1,0 +1,46 @@
+.pull-right{
+  float: right;
+}
+
+.button-icon-delete{
+  border:  none;
+  background: #e73434;
+  color: white;
+}
+
+.button-icon-edit{
+  border:  none;
+  background: #1786ef;
+  color: white;
+  margin-right: 10px;
+}
+
+.app {
+  padding: 5px 15px;
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.navbar {
+  font-size: 25px;
+  background-color: #90caf9;
+}
+
+.createNewBtn{
+  width: 30%;
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+.dropdown-item {
+  cursor: pointer;
+}
+
+.modal.show{
+  display: block;
+}
+
+

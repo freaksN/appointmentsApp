@@ -1,0 +1,63 @@
+<div class="patients">
+  <h1 class="sectionHeader">Patients</h1>
+  <div class="container text-danger mb-2" ng-if="vm.showDeletedPatientNotification">
+    <i class="fas fa-times"></i> {{vm.showDeletedPatientNotification}}
+  </div>
+  <div class="container text-success mb-2" ng-if="vm.showEditPatientNotification">
+    <i class="far fa-check-circle"></i> {{vm.showEditPatientNotification}}
+  </div>
+  <div class="container">
+    <div class="row" ng-if="vm.patients.length">
+      <div class="col-md-12">
+        <table class="table table-striped table-hover table-bordered">
+          <thead class="thead-dark">
+          <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Notes</th>
+            <th scope="col">Actions</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr ng-repeat="patient in vm.patients">
+            <td class="col-md-2" title="{{patient.firstName}}"><b>{{patient.firstName}}</b></td>
+            <td class="col-md-2" title="{{patient.lastName}}"><b>{{patient.lastName}}</b></td>
+            <td title="{{patient.notes}}">{{ patient.notes}}</td>
+            <td class="col-md-1">
+              <button type="button" title="remove this patient" class="pull-right button-icon-delete"
+                      ng-click="vm.openDeleteDialog(patient)">
+                <i class=" fas fa-trash-alt"></i></button>
+              <button type="button" title="edit this patient" class="pull-right button-icon-edit"
+                      ui-sref="add-patient({id:patient.id})">
+                <i class="fas fa-pen"></i>
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-11">
+          <div style="width: 35%">
+            <a class="btn btn-success btn-block createNewBtn w-100" title="Go to the ''Create New Patient'' page" ui-sref="add-patient">Create New Patient</a>
+          </div>
+        </div>
+        <div class="col-sm-1" ng-if="vm.patients.length">
+          <div class="btn-group w-100">
+            <button type="button" class="btn btn-info dropdown-toggle" style="font-size: 20px;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-download"></i></button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" title="Download all Appointments as PDF" ng-href="{{vm.downloadPatientsDataUrl('pdf')}}">as PDF</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" title="Download all Appointments as CSV" ng-href="{{vm.downloadPatientsDataUrl('csv')}}">as CSV</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" title="Download all Appointments as ODS" ng-href="{{vm.downloadPatientsDataUrl('ods')}}">as OpenDocument Spreadsheet</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

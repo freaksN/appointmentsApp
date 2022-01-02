@@ -1,0 +1,9 @@
+import backend.Patient
+
+model {
+    Patient patient
+}
+
+json g.render(patient) {
+    appointments patient.getPatientData(params.get('id'))
+}
