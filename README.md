@@ -47,7 +47,7 @@ https://plugins.grails.org/plugin/grails/export
 # Usage
 To download and use the companion project you can simply clone it to your preferred location by using
 ```
-https://git.systaro.de/sandbox/vasil-companion-project.git
+https://github.com/freaksN/appointmentsApp
 ```
 
 To _only_ use the starter project utilized for the development of _my_ companion project without the additional features  you can simply clone it to your preferred location by using
